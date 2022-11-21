@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<ScrollView-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@color/custom_black">-->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ControllingActivity">
+
+    <TextView
+        android:id="@+id/lightTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="19dp"
+        android:text="@string/light"
+        android:textColor="@color/custom_blue"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toBottomOf="@+id/on"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/on"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/fanTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fan"
+        android:textSize="45sp"
+        android:textColor="@color/custom_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/fanOn"
+        app:layout_constraintEnd_toEndOf="@+id/lightTv"
+        app:layout_constraintStart_toStartOf="@+id/lightTv"
+        app:layout_constraintTop_toTopOf="@+id/fanOn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/on"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/rounded_corners"
+        android:foreground="@drawable/ic_power_button"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        app:backgroundTint="#19971E"
+        app:layout_constraintBottom_toBottomOf="@+id/off"
+        app:layout_constraintEnd_toStartOf="@+id/off"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lightTv"
+        app:layout_constraintTop_toTopOf="@+id/off" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/off"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/rounded_corners"
+        android:foreground="@drawable/ic_power_button"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        app:backgroundTint="#BF1111"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/on"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fanOn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/rounded_corners"
+        android:foreground="@drawable/ic_power_button"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        app:backgroundTint="#19971E"
+        app:layout_constraintBottom_toBottomOf="@+id/fanOff"
+        app:layout_constraintEnd_toEndOf="@+id/on"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/on"
+        app:layout_constraintTop_toTopOf="@+id/fanOff" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fanOff"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/rounded_corners"
+        android:foreground="@drawable/ic_power_button"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        app:backgroundTint="#BF1111"
+        app:layout_constraintEnd_toEndOf="@+id/off"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/off"
+        app:layout_constraintTop_toBottomOf="@+id/off" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

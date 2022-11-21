@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Jarvis</string>
+    <string name="search">Search</string>
+    <string name="connect">Connect</string>
+    <string name="light">Light</string>
+    <string name="fan">Fan</string>
+</resources>
